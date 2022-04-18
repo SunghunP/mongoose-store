@@ -1,0 +1,20 @@
+require('dotenv').config();
+////////////////////////////////////////
+// Dependencies
+////////////////////////////////////////
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3001;
+const DATABASE_URL = process.env.DATABASE_URL;
+
+////////////////////////////////////////
+// Middleware
+////////////////////////////////////////
+
+////////////////////////////////////////
+// Routes
+////////////////////////////////////////
+app.listen(PORT, () => {
+	console.log(`You are listening on ${PORT}`);
+	console.log(`You can find us on ${DATABASE_URL}`);
+});
