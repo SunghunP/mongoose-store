@@ -35,7 +35,8 @@ router.get('/', (req, res) => {
 
 // New - GET: render product_show.ejs 
 router.get('/new', (req, res) => {
-	res.send('ayoooofsjignsiognriugn')
+	// render the new product page
+	res.render('product_new.ejs')
 });
 
 // Create - POST: Post data of created product to the /products page 

@@ -18,7 +18,7 @@ app.use(morgan("dev")); // log every HTTP request
 
 // Route manager for the product controller
 const productRouter = require('./controllers/products');
-app.use('/products/', productRouter);
+app.use('/products', productRouter);
 
 ////////////////////////////////////////
 // Routes

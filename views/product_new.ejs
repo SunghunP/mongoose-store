@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head.ejs") %> 
+
+<body>
+	<%- include("partials/header.ejs") %> 
+	<div class="flex-cntr">
+		<h1>Create a New Product</h1>
+	</div>
+	
+	<form class="new-product-form flex-cntr col" action="/products/" method="POST">
+		<div class="form-child form-name">
+			<label for="name"></label>
+			Name: <input name="name"/>
+		</div>
+
+		<div class="form-child form-description flex-cntr">
+			<label for="description"></label>
+			Description: <input name="description"/>
+		</div>
+
+		<div class="form-child form-img flex-cntr">
+			<label for="img"></label>
+			Image Link: <input name="img"/>
+		</div>
+
+		<div class="form-child form-price flex-cntr">
+			<label for="price"></label>
+			Price: <input name="price"/>
+		</div>
+
+		<div class="form-child form-qty flex-cntr">
+			<label for="qty"></label>
+			Quantity: <input name="qty"/>
+		</div>
+
+	</form>
+</body>
+</html>
