@@ -1,0 +1,77 @@
+/* ----------------------------- */
+/* root var config */
+/* ----------------------------- */
+:root {
+	--color: #000000;
+	--nav-bg-color: #d3d3d3;
+}
+
+/* ----------------------------- */
+/* flex styles */
+/* ----------------------------- */
+.flex-cntr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-cntr.col {
+	flex-direction: column;
+}
+
+/* ----------------------------- */
+/* body styles */
+/* ----------------------------- */
+body {
+	margin: 0;
+	height: 2000px;
+}
+
+/* ----------------------------- */
+/* header styles */
+/* ----------------------------- */
+header {
+	margin-bottom: 20px;
+	background-color: var(--nav-bg-color);
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
+
+nav {
+	width: 100%;
+}
+
+nav h1 {
+	font-size: 40px;
+}
+
+nav h2 {
+	font-size: 30px;
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.nav-links a {
+	color: #000000;
+	font-size: 30px;
+	text-decoration: none;
+	margin-right: 20px;
+	padding: auto;
+}
+
+.nav-links div {
+	text-decoration: none;
+	color: #000000;
+}
+
+#top-nav {
+	justify-content: space-between;
+
+}
+
+/* ----------------------------- */
+/* main styles */
+/* ----------------------------- */

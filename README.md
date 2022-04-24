@@ -12,4 +12,4 @@ This is a small CRUD application that allows me to practice my understanding of 
 `show: GET "/products/:id/" => renders show page info on a particular product` <br>
 `edit: GET "/products/:id/edit/" => renders edit show page for a certain product` <br>
 `update: PUT "/products/:id/" => update the edited product` <br>
-`delete: DELETE "/products/shop/:id/" => delete the product` <br>
+`delete: DELETE "/products/:id/" => delete the product` <br>

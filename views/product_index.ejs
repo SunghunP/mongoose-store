@@ -3,16 +3,25 @@
 <%- include("partials/head.ejs") %> 
 
 <body>
-	<h1>Products</h1>
+	<header class="flex-cntr">
+		<nav class="flex-cntr" id="top-nav">
+			<h2>Products</h2>
+			<h1>Mongoose Store</h1>
+			<div class="nav-links flex-cntr">
+				<a href="/products">Home</a>
+				<a href="/products/new" >Create Product</a>
+			</div>
+		</nav>
+	</header>
+	
 
-	<div class="products">
+	<div class="products flex-cntr">
 		<% products.forEach( product => { %>
-			<%= console.log(product) %> 
 			<div class="product-cntr">
 				<div class="img-cntr">
 					<a href="<%= product._id %> "><img src="<%= product.img %>" alt="Image of <%= product.name %>"></a>
 				</div>
-				<div class="text-cntr">
+				<div class="text-cntr flex-cntr col">
 					<div class="name-cntr">Name: <%= product.name %> </div>
 					<div class="price-cntr">Product: <%= product.price %> </div>
 					<div class="qty-cntr">Quantity: <%= product.qty %> </div>
