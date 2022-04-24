@@ -43,7 +43,11 @@ router.post('/');
 
 // Show - GET: Renders show page for product_show.ejs
 router.get('/:id', (req, res) => {
-	res.send('ayo')
+	const id = req.params.id
+	Product.findById(id, (err, product) => {
+		// Render show page for a single product
+		res.render('product_show.ejs', {product});
+	});	
 });
 
 // Edit - GET: Render show page for products_edit.ejs

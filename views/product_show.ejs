@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include("partials/head.ejs") %> 
+<body>
+	<%- include("partials/header.ejs") %> 
+
+	<div class="flex-cntr product-cntr">
+		<div class="img-cntr">
+			<img src="<%= product.img %>" alt="Image of <%= product.name %>">
+		</div>
+
+		<div class="text-cntr flex-cntr col">
+			<div class="product-description flex-cntr col">
+				<div class="name-cntr">Name: <%= product.name %> </div>
+				<div class="desc-cntr"><%= product.description %> </div>
+				<div class="price-cntr">Price: <%= product.price %> </div>
+				<div class="qty-cntr">Quantity: <%= product.qty %> </div>
+			</div>
+
+			<div class="product-purchaser flex-cntr">
+				<form class="flex-cntr col" action="/" method="POST">
+					<div class="flex-cntr">
+						<button id="minus-btn" type="button">-</button>
+						<div class="qty-counter"><input class="qty" type="text" type="number" value="0"/></div>
+						<button id="add-btn" type="button">+</button>
+					</div>
+					<button class="buy-button" type="submit">Buy</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
