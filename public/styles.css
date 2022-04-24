@@ -4,6 +4,7 @@
 :root {
 	--color: #000000;
 	--nav-bg-color: #d3d3d3;
+	--nav-border-color: #a3a3a3;
 }
 
 /* ----------------------------- */
@@ -40,13 +41,16 @@ header {
 
 nav {
 	width: 100%;
+	border: var(--nav-border-color) 3px solid;
 }
 
 nav h1 {
 	font-size: 40px;
+	flex: auto;
 }
 
 nav h2 {
+	flex: auto;
 	font-size: 30px;
 	text-align: left;
 	margin-left: 20px;
@@ -54,12 +58,17 @@ nav h2 {
 	margin-bottom: 20px;
 }
 
+.nav-links {
+	flex: auto;
+}
+
 .nav-links a {
 	color: #000000;
 	font-size: 30px;
 	text-decoration: none;
-	margin-right: 20px;
-	padding: auto;
+	margin-right: 10px;
+	padding: 15px;
+	border-inline: 3px solid var(--nav-border-color);
 }
 
 .nav-links div {
@@ -73,5 +82,43 @@ nav h2 {
 }
 
 /* ----------------------------- */
-/* main styles */
+/* main body content styles */
 /* ----------------------------- */
+.product-cntr {
+	margin: 15px;
+	padding: 2px;
+}
+
+/* ----------------------------- */
+/* product container styles */
+/* ----------------------------- */
+.qty-counter input {
+	width: 80px;
+	text-align: center;
+}
+
+.image-cntr {
+	flex:auto;
+}
+
+div.text-cntr.flex-cntr.col {
+	width: 200px;
+	max-height: inherit;
+	align-self: stretch;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.product-description div {
+	width: inherit;
+	margin: 5px;
+}
+
+.product-purchaser {
+	width: inherit;
+}
+
+.buy-button {
+	width: 100%;
+}
+
