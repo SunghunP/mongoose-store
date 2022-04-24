@@ -3,18 +3,7 @@
 <%- include("partials/head.ejs") %> 
 
 <body>
-	<header class="flex-cntr">
-		<nav class="flex-cntr" id="top-nav">
-			<h2>Products</h2>
-			<h1>Mongoose Store</h1>
-			<div class="nav-links flex-cntr">
-				<a href="/products">Home</a>
-				<a href="/products/new" >Create Product</a>
-			</div>
-		</nav>
-	</header>
-	
-
+	<%- include("partials/header.ejs") %> 
 	<div class="products flex-cntr">
 		<% products.forEach( product => { %>
 			<div class="product-cntr">
