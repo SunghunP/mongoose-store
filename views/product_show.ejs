@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="product-purchaser flex-cntr">
-				<form class="flex-cntr col" action="/" method="POST">
+				<form class="flex-cntr col" action="/product<%= product._id %>?_method=PUT" method="POST">
 					<div class="buy-btn-cntr flex-cntr">
 						<button id="minus-btn" type="button">-</button>
 						<div class="qty-counter">

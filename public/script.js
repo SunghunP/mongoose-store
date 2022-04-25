@@ -6,9 +6,8 @@
 const $quantityBtnCntr = $('.buy-btn-cntr');
 // element containing value of current buy count. val() should be 0 at initialization
 const $quantityBuyCount = $('#qty-buy');
-
-
-
+// // the buy button on the show page
+// const $buyBtn = $('.buy-button');
 
 // event listener
 $quantityBtnCntr.click((event) => {
@@ -37,6 +36,10 @@ $quantityBtnCntr.click((event) => {
 		};
 	};
 });
+
+// $buyBtn.click((event) => {
+// 	console.log($quantityBuyCount.val());
+// });
 
 function getNumberInStock() {
 	// the string of the stock ('Quantity: X') 

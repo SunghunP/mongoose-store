@@ -61,8 +61,12 @@ router.get('/:id', (req, res) => {
 	});	
 });
 
-// Edit - GET: Render show page for products_edit.ejs
-router.get('/:id/edit');
+// Edit - GET: Render edit page for products_edit.ejs
+router.get('/:id/edit', (req, res) => {
+	Product.findById(req.params.id, (err, product) => {
+		res.render('product_edit.ejs', {product})
+	})
+});
 
 // Update - PUT: Update the edited product
 router.put('/:id');
