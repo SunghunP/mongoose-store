@@ -7,7 +7,7 @@ This is a small CRUD application that allows me to practice my understanding of 
 
 ### Usage and Features
 A user will be able to create a product, view a particular product, edit that product, and delete the product. 
-They are also able to 
+They are also able to buy items reducing the stock. 
 
 ### Routes
 `index: GET "/products/" => renders index show page that contains all of the products available.` <br>

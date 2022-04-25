@@ -36,7 +36,11 @@
 						</div>
 						<button id="add-btn" type="button">+</button>
 					</div>
-					<button class="buy-button" type="submit">Buy</button>
+					<% if (product.qty === 0) { %>
+						<button class="buy-button" type="submit" style="background-color: red;color: black;" disabled>OUT OF STOCK</button>
+					<% } else { %>
+						<button class="buy-button" type="submit" >Buy</button>
+					<% } %>
 				</form>
 			</div>
 		</div>
