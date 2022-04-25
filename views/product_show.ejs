@@ -2,7 +2,16 @@
 <html lang="en">
 	<%- include("partials/head.ejs") %> 
 <body>
-	<%- include("partials/header.ejs") %> 
+	<header class="flex-cntr">
+		<nav class="flex-cntr" id="top-nav">
+			<h2><%= product.name %></h2>
+			<h1>Mongoose Store</h1>
+			<div class="nav-links flex-cntr">
+				<a href="/products">Home</a>
+				<a href="/products/new" >Create Product</a>
+			</div>
+		</nav>
+	</header>
 
 	<div class="flex-cntr product-cntr">
 		<div class="img-cntr">
