@@ -28,6 +28,10 @@ body {
 	height: 2000px;
 }
 
+div {
+	font-size: 25px;
+}
+
 /* ----------------------------- */
 /* header styles */
 /* ----------------------------- */
@@ -60,6 +64,7 @@ nav h2 {
 
 .nav-links {
 	flex: auto;
+	justify-content: flex-end;
 }
 
 .nav-links a {
@@ -92,17 +97,20 @@ nav h2 {
 /* ----------------------------- */
 /* product container styles */
 /* ----------------------------- */
+.products {
+	flex-wrap: wrap;
+}
+
 .qty-counter input {
 	width: 80px;
 	text-align: center;
 }
-
-.image-cntr {
-	flex:auto;
+div.img-cntr {
+	margin: 20px;
 }
 
 div.text-cntr.flex-cntr.col {
-	width: 200px;
+	width: inherit;
 	max-height: inherit;
 	align-self: stretch;
 	justify-content: space-around;
@@ -129,6 +137,30 @@ div.text-cntr.flex-cntr.col {
 	margin: 10px;
 }
 
+button {
+	font-size: 20px;
+	height: inherit;
+}
+
+input {
+	font-size: 20px;
+	margin: 2px;
+}
+
 /* ----------------------------- */
 /* new page form styles */
 /* ----------------------------- */
+body form.new-product-form {
+	border: solid 10px var(--nav-border-color);
+	width: 30%;
+	padding: 40px;
+	padding-top: 5px;
+	min-width: 450px;
+	min-height: 250px;
+}
+
+.form-child {
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+}
