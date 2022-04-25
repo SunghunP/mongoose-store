@@ -1,24 +1,48 @@
-// // variables
-// const submitBtn = $('submit-button');
-// const inputs = document.querySelectorAll('input');
-// console.log(inputs)
+// variables
+// i want to use a event handler to increase or decrease buy qty. 
+// you know its bad code if i have to write comments to explain everything to myself
+// ill learn through time tho
+// event handler parent for event propagation
+const $quantityBtnCntr = $('.buy-btn-cntr');
+// element containing value of current buy count. val() should be 0 at initialization
+const $quantityBuyCount = $('#qty-buy');
 
-// // function to check if input fields are empty or not
-// function disableEmptyInput () {
-// 	inputs.forEach(input => {
-// 		console.log(input.value)
-// 		// if the input returns an empty string...
-// 		// an empty string is a falsy value so we want to ask if it is false.
-// 		// the ! operator will make "" become true therefore running the code block. 
-// 		// "" = false, !"" = true
-// 		if (!input.value) {
-// 			// if the value is empty meaning no user input then we disable that input 
-// 			input.setAttribute("disabled", "disabled");
-// 		}
-// 	});
-// }
 
-// // create an event listener that disables empty input fields 
-// submitBtn.addEventListener("click", () => {
-// 	disableEmptyInput()
-// })
+
+
+// event listener
+$quantityBtnCntr.click((event) => {
+	// check to see if the Qty 
+	const target = $(event.target);
+	// check if clicked element is a button
+	if (event.target.tagName === 'BUTTON') {
+		// if button's text value is '+'
+		if (target.text() === '+') {
+			// check to see if the product quantity is less or equal to the desired quantity 
+			if (getNumberInStock() <= $quantityBuyCount.val()) {
+				return window.alert(`You cannot buy more than what's available`);
+			}
+			$quantityBuyCount.val(() => {
+				return +$quantityBuyCount.val() + 1;
+			});
+		} else if (target.text() === '-') { // want to to make the code explicit that's why im writing this
+			// check to see if the number is 0 or less
+			if ($quantityBuyCount.val() <= 0) {
+				return window.alert('You cannot choose a value lower than 0');
+			} else {
+				$quantityBuyCount.val(() => {
+					return +$quantityBuyCount.val() - 1;
+				});
+			};
+		};
+	};
+});
+
+function getNumberInStock() {
+	// the string of the stock ('Quantity: X') 
+	const $productQtyString = $('.qty-cntr');
+	let qty = $productQtyString.text();
+	// replace all non numbers with an empty string
+	// getting rid of 'Quantity: ' 
+	return parseInt(qty.replace(/^\D+/g, ''));
+};

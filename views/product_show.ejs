@@ -28,9 +28,11 @@
 
 			<div class="product-purchaser flex-cntr">
 				<form class="flex-cntr col" action="/" method="POST">
-					<div class="flex-cntr">
+					<div class="buy-btn-cntr flex-cntr">
 						<button id="minus-btn" type="button">-</button>
-						<div class="qty-counter"><input class="qty" type="text" type="number" value="0"/></div>
+						<div class="qty-counter">
+							<input id="qty-buy" type="text" type="number" value="0"/>
+						</div>
 						<button id="add-btn" type="button">+</button>
 					</div>
 					<button class="buy-button" type="submit">Buy</button>

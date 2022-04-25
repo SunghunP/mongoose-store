@@ -107,6 +107,8 @@ nav h2 {
 }
 div.img-cntr {
 	margin: 20px;
+	width: 300px;
+	height: 200px;
 }
 
 div.text-cntr.flex-cntr.col {
