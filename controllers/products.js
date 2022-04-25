@@ -40,7 +40,17 @@ router.get('/new', (req, res) => {
 });
 
 // Create - POST: Post data of created product to the /products page 
-router.post('/');
+router.post('/', (req, res) => {
+	if (!req.body.img) req.body.img = '../noimageprovided.png'
+	Product.create(req.body, (err, createdProduct) => {
+		if (err) {
+			console.log(err)
+			return res.send(err)
+		} else {
+			res.redirect('/products')
+		}
+	})
+});
 
 // Show - GET: Renders show page for product_show.ejs
 router.get('/:id', (req, res) => {

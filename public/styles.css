@@ -146,6 +146,11 @@ input {
 	font-size: 20px;
 	margin: 2px;
 }
+button.new-form-submit-btn {
+	margin-top: 20px;
+	font-size: 30px;
+	width: fit-content;
+}
 
 /* ----------------------------- */
 /* new page form styles */

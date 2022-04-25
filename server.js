@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 ////////////////////////////////////////
 app.use(express.urlencoded({extended: false})); // parses url encoded bodies
 app.use(methodOverride('_method')); 
-app.use("/public", express.static('public')); // serve files from public statically 
+app.use(express.static('public')); // serve files from public statically 
 app.use(morgan("dev")); // log every HTTP request
 
 // Route manager for the product controller
