@@ -70,11 +70,32 @@ router.get('/:id/edit', (req, res) => {
 
 // Update - PUT: Update the edited product
 router.put('/:id', (req,res) => {
-	if (!req.body.img) req.body.img = '../noimageprovided.png'
-	Product.findByIdAndUpdate(req.params.id, req.body, (err, updatedproduct) => {
-		if(err) console.log(err);
-		res.redirect(`/products/${req.params.id}`);
-	});
+	console.log(req.body)
+	const id = req.params.id
+	const inputQty = parseInt(req.body.qty)
+	const productQty = parseInt(req.body.productQty)
+	const finalQty = productQty - inputQty
+	// $set can add a new field but to change one field you can just by pass it.
+	// Model.update({_id :req.body.modelId },{$set : {new_field: "value"}})
+	// READ THE DOCUMENTATION
+	// Product.findById(req.params.id)
+	// The if is for the buy button since it returns two key:value pairs
+	if (Object.keys(req.body).length === 2) {
+		Product.findByIdAndUpdate(
+			id,
+			{ 'qty': finalQty },
+			(err, updatedProduct) => {
+				console.log(updatedProduct)
+				res.redirect(`/products/${id}`)
+			}
+		);
+	} else {
+		if (!req.body.img) req.body.img = '../noimageprovided.png';
+		Product.findByIdAndUpdate(req.params.id, req.body, (err, updatedProduct) => {
+			if(err) console.log(err);
+			res.redirect(`/products/${req.params.id}`);
+		});
+	}
 });
 
 // Destroy - DELETE: Delete the product
