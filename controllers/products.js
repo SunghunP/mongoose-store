@@ -69,9 +69,17 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // Update - PUT: Update the edited product
-router.put('/:id');
+router.put('/:id', (req,res) => {
+	if (!req.body.img) req.body.img = '../noimageprovided.png'
+	Product.findByIdAndUpdate(req.params.id, req.body, (err, updatedBook) => {
+		if(err) console.log(err);
+		res.redirect(`/products/${req.params.id}`)
+	})
+});
 
 // Destroy - DELETE: Delete the product
-router.delete('/:id');
+router.delete('/:id', (req, res) => {
+
+});
 
 module.exports = router;

@@ -8,31 +8,31 @@
 		<h1> Edit <%= product.name %> </h1>
 	</div>
 	<div class="form-cntr flex-cntr">
-		<form class="new-product-form flex-cntr col" action="/products<%= product.name %>/?_method=PUT" method="POST">
+		<form class="new-product-form flex-cntr col" action="/products/<%= product._id %>/?_method=PUT" method="POST">
 			<h3>Please fill out all of the fields <br>(Image link can be added later)</h3>
 			<div class="form-child form-name flex-cntr">
 				<label class="form-label" for="name">Name: </label>
-				<input class="form-right" name="name" required/>
+				<input class="form-right" name="name" value="<%= product.name %>" required/>
 			</div>
 
 			<div class="form-child form-description flex-cntr flex-cntr">
 				<label class="form-label" for="description">Description: </label>
-				<input class="form-right" name="description" required/>
+				<input class="form-right" name="description" value="<%= product.description %>" required/>
 			</div>
 
 			<div class="form-child form-img flex-cntr flex-cntr">
 				<label class="form-label" for="img">Image Link: </label>
-				<input class="form-right" name="img" />
+				<input class="form-right" name="img" value="<%= product.img %>" />
 			</div>
 
 			<div class="form-child form-price flex-cntr flex-cntr">
 				<label class="form-label" for="price">Price: </label>
-				<input class="form-right" name="price" type=number required/>
+				<input class="form-right" name="price" type=number value="<%= parseInt(product.price) %>" required/>
 			</div>
 
 			<div class="form-child form-qty flex-cntr flex-cntr">
 				<label class="form-label" for="qty">Quantity: </label>
-				<input class="form-right" name="qty" type="number" required/>
+				<input class="form-right" name="qty" type="number" value="<%= parseInt(product.qty) %>" required/>
 			</div>
 			<button class="new-form-submit-btn" type="submit">Submit</button>
 		</form>

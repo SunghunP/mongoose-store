@@ -112,11 +112,12 @@ div.img-cntr {
 }
 
 div.text-cntr.flex-cntr.col {
-	width: inherit;
+	width: 250px;
 	max-height: inherit;
 	align-self: stretch;
 	justify-content: space-around;
 	text-align: center;
+	flex-wrap: wrap;
 }
 
 .product-description div {
@@ -130,6 +131,10 @@ div.text-cntr.flex-cntr.col {
 
 .buy-button {
 	width: 100%;
+}
+
+.desc-cntr {
+	flex-wrap: wrap;
 }
 
 /* ----------------------------- */
