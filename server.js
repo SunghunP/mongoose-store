@@ -23,7 +23,7 @@ app.use('/products', productRouter);
 ////////////////////////////////////////
 // Routes
 ////////////////////////////////////////
-app.get('/', (res,req) => {
+app.get('/', (req,res) => {
 	res.redirect('/products');
 })
 
