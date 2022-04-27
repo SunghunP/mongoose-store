@@ -2,6 +2,8 @@
 ### Description
 A product inventory manager!
 
+Here is a link to the deployment!
+https://mongoose-store-sunghunp.herokuapp.com/products
 ### Purpose
 This is a small CRUD application that allows me to practice my understanding of the 'MEEN' stack: MongoDB, Express, Ejs, and Node.
 
