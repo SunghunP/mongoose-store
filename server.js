@@ -6,7 +6,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const morgan = require('morgan') // HTTP status reader
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 ////////////////////////////////////////
 // Middleware
@@ -23,6 +23,10 @@ app.use('/products', productRouter);
 ////////////////////////////////////////
 // Routes
 ////////////////////////////////////////
+app.listen('/', (res,req) => {
+	res.redirect('/products');
+})
+
 app.listen(PORT, () => {
 	console.log(`You are listening on ${PORT}`);
 });
